@@ -1,18 +1,19 @@
-## Getting Started
+# Compras Online
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto demonstra um sistema de compras online utilizando o padrão de projeto Facade em Java. O sistema inclui funcionalidades para gerenciar um carrinho de compras, processar pagamentos e enviar confirmações de compra por e-mail.
 
-## Folder Structure
+## Descrição do Sistema
 
-The workspace contains two folders by default, where:
+O sistema de compras online permite que os usuários adicionem itens ao carrinho, processem o pagamento e recebam uma confirmação por e-mail. Para simplificar a interação com esses componentes, utilizamos o padrão de projeto Facade, que fornece uma interface unificada para um conjunto de interfaces em um subsistema.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Funcionalidades
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. **Adicionar Item ao Carrinho**: Os usuários podem adicionar itens ao carrinho especificando o nome do item e a quantidade desejada.
+2. **Remover Item do Carrinho**: Os usuários podem remover itens do carrinho especificando o nome do item e a quantidade a ser removida.
+3. **Finalizar Compra**: Ao finalizar a compra, o sistema processa o pagamento e envia uma confirmação por e-mail ao usuário.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Padrão de Projeto Utilizado
 
-## Dependency Management
+#### Facade
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+O padrão de projeto Facade é utilizado para fornecer uma interface simplificada para interagir com múltiplos subsistemas. No nosso sistema, a classe `SistemaCompraOnline` atua como a fachada, coordenando as operações entre os subsistemas `CarrinhoDeCompras`, `ProcessamentoPagamento` e `EnvioEmail`.
